@@ -31,7 +31,7 @@ const targetMember = "name";
 console.log(person[targetMember]);
 
 person.walk(); // calling this method from person
-// in the above case you will see the expected result like getting the current onject in
+// in the above case you will see the expected result like getting the current object in
 // this.
 
 // now lets create a constant and assign the reference of walk() method
@@ -138,3 +138,34 @@ const address = {
 
 var { street, city, country } = address;
 console.log(street, city, country);
+
+// Spread operator
+const first = [1, 2, 3, 4, 5];
+const second = [6, 7, 8];
+
+// now lets suppose we have to merge those two arrays
+const merged = first.concat(second);
+console.log(merged);
+
+// using spread (...)
+const combined = [...first, ...second];
+console.log(combined);
+
+const combinedWithMore = [...first, "a", ...second, "z"];
+console.log(combinedWithMore);
+
+// can be used to create clones
+const clone = [...first];
+console.log(clone);
+
+// another use case
+const one = { name: "Sidhant" };
+const two = { job: "Android Developer" };
+
+// now lets merge and add more property
+const combination = { ...one, ...two, location: "Jaipur" };
+console.log(combination);
+
+// cloning again
+const newClone = { ...one };
+console.log(newClone);
