@@ -199,3 +199,7 @@ t.walk();
 t.teach();
 console.log(t.name);
 console.log(t.degree);
+
+// Default and named modules
+// Default --> import ... from './whatever'
+// Named --> import {...} from './whatever'
