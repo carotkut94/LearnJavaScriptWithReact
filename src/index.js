@@ -169,3 +169,33 @@ console.log(combination);
 // cloning again
 const newClone = { ...one };
 console.log(newClone);
+
+// Classes as blueprints
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  walk() {
+    console.log("walk");
+  }
+}
+
+const p = new Person("Rahul");
+p.walk();
+
+// Inheritance
+class Teacher extends Person {
+  constructor(name, degree) {
+    super(name);
+    this.degree = degree;
+  }
+  teach() {
+    console.log("teach");
+  }
+}
+
+const t = new Teacher("Sidhant", "B.Tech");
+t.walk();
+t.teach();
+console.log(t.name);
+console.log(t.degree);
