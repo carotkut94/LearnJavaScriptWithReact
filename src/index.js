@@ -104,3 +104,37 @@ const man2 = {
 };
 
 man2.talk();
+
+const colors = ["red", "green", "blue"];
+
+// use of map function
+// it looks ugly when we use + to concatenate the string
+const colorItems = colors.map(color => "<li>" + color + "</li>");
+
+// Another way to string interpolation using template literal
+const colorLiteralItems = colors.map(color => `<li>${color}</li>`);
+console.log(colors);
+console.log(colorItems);
+console.log(colorLiteralItems);
+
+// Object destructuring
+
+const address = {
+  street: "Kumbha Marg",
+  city: "Jaipur",
+  country: "India"
+};
+
+// now suppose we have to assign the address members to separate variable
+// then we will use the . operator, like -->
+
+// var street = address.street;
+// var city = address.city;
+// var country = address.country;
+
+// console.log(street, city, country);
+
+// Another way around this
+
+var { street, city, country } = address;
+console.log(street, city, country);
